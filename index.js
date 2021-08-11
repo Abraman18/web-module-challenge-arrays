@@ -45,8 +45,9 @@ Use the copy function below to do the following:
   2. Return a copy of the received array  
 */
 
-function copy(/*your code here*/){
-  /*your code here*/
+function copy(array){
+  let newArray = [...array];
+  return newArray;
 }    
 
 
@@ -64,7 +65,10 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 */
 
 
-function is31Flavors(/*your code here*/){
+function is31Flavors(array) {
+  if (array.length == 31) {
+    return true;
+  }
  /*your code here*/
 }
 
@@ -81,8 +85,9 @@ Use the addFlavor function below to do the following:
 */
 
 
-function addFlavor(/*your code here*/){
- /*your code here*/
+function addFlavor(array, string){
+  array.unshift(string);
+  return array;
 }
 
 
@@ -97,7 +102,9 @@ Use the removeLastFlavor function below to do the following:
   For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
 
-function removeLastFlavor(/*your code here*/){
+function removeLastFlavor(array) {
+  array.pop();
+  return array;
  /*your code here*/
 }
 
@@ -114,8 +121,8 @@ Use the getFlavorByIndex function below to do the following:
   For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 
-function getFlavorByIndex(/*your code here*/){
-  /*your code here*/
+function getFlavorByIndex(array, number){
+  return array[number];
 }
 
 
@@ -134,8 +141,12 @@ Use the removeFlavorByName function below to do the following:
   HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/){
-  /*your code here*/
+function removeFlavorByName(array, string){
+  for (let i = 0; i <= array.length; i++){
+    if (array[i] == string) {
+      array.splice(i,1);
+    }
+  }return array;
 }
 
 
@@ -183,9 +194,15 @@ Use the getAverageWordLength function below to do the following:
   For example: getAverageWordLength(originalFlavors) should return a number between 0 and 3.     
 */
 
-function getAverageWordLength(/*code here*/){
-  /*code here*/
-}
+// function getAverageWordLength(array){
+//   arrayIndex = array[i];
+//   wordIndex = arrayIndex[i];
+//   for (let i = 0; i < array.length; i++){
+//     for (let i = 0; i < wordIndex.length; i++){
+//       console.log(Math.add(i++));
+//     }
+//   }
+// }
 
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪
